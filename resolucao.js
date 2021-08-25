@@ -53,7 +53,7 @@ data.sort(function (a, b) {
 console.log();
 //calcular o valor total do estoque por categoria
 console.log('Valores referentes ao estoque para cada categoria:\n')
-var newObjectsMerged = data.reduce((object, item) => {
+var merged = data.reduce((object, item) => {
   var category = item.category;
   var amount = item.price * item.quantity;
   if (!object.hasOwnProperty(category)) {
@@ -63,7 +63,7 @@ var newObjectsMerged = data.reduce((object, item) => {
   return object;
 },{})
 
-console.log(newObjectsMerged);
+console.log(merged);
 
   }
   catch{
